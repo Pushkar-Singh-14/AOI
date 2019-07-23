@@ -16,6 +16,12 @@ count=8
 num_list=[]
 toe=time.time()
 
+###
+mul_case=15
+pyth_trp_case=10
+add_case=20
+rtp_case=15
+###
 fig = plt.figure(figsize=(13,8), dpi=100)
 ax1 = fig.add_subplot(1,1,1)
 
@@ -32,7 +38,7 @@ for i in range(c):
     if switch==1:
         print("Addition")
         t_add_start=time.time()
-        for i in range(test_count):
+        for i in range(add_case):
 
             x=random.randint(1,50)
             a=random.randint(1,20)
@@ -146,7 +152,7 @@ for i in range(c):
         t8_start=time.time()
         print("multiplication")
         try:
-            for i in range(15):
+            for i in range(mul_case):
 
                 x=random.randint(12,18)
                 a=random.randint(1,9)
@@ -161,7 +167,7 @@ for i in range(c):
     if switch==9:
         t9_start=time.time()
         print("pythagoras triplets")
-        for i in range(10):
+        for i in range(pyth_trp_case):
             
             p=random.randint(0,9)
             num_list_py=[]
@@ -215,7 +221,7 @@ for i in range(c):
     if switch==11:
         t11_start=time.time()
         print("ratio to percentage")
-        for i in range(15):
+        for i in range(rtp_case):
             k= random.randint(0,len(rtp)-1)
             res=round(((1/rtp[k])*100),2)
             z_input_15 = input()
@@ -226,7 +232,7 @@ for i in range(c):
     if switch==12:
         t12_start=time.time()
         print("percentage to ratio")
-        for i in range(15):
+        for i in range(rtp_case):
             k= random.randint(0,len(rtp)-1)
             res=round(((1/rtp[k])*100),2)
             z_input_15 = input()
@@ -255,7 +261,7 @@ print("time taken per ques: {} min {} sec".format(minute_pq,int(round(sec_pq,0))
 ####### Time #### ADDITION ####
         
 tic2=t_add_stop-t_add_start
-per_ques=tic2/test_count
+per_ques=tic2/add_case
 per_ques=round((per_ques/60),2)
 tic2=round((tic2/60),2)
 
@@ -313,7 +319,7 @@ sec=round(((tic5-minute)*60),2)
 
 minute_pq=int(per_ques)
 sec_pq=round(((per_ques-minute_pq)*60),2)
-print("\n \n *******NUMBER TO ALPHABET******** ")
+print("\n \n *******SQUARE******** ")
 print("total time: {} min {} sec".format(minute,sec))
 print("time taken per ques: {} min {} sec".format(minute_pq,int(round(sec_pq,0))))
 
@@ -370,7 +376,7 @@ print("time taken per ques: {} min {} sec".format(minute_pq,int(round(sec_pq,0))
 ####### Time #### MULTIPLICATION ####
         
 tic9=t8_stop-t8_start
-per_ques=tic9/test_count
+per_ques=tic9/mul_case
 per_ques=round((per_ques/60),2)
 tic9=round((tic9/60),2)
 
@@ -386,7 +392,7 @@ print("time taken per ques: {} min {} sec".format(minute_pq,int(round(sec_pq,0))
 ####### Time #### PYTHAGOREAN TRIPLET ####
         
 tic10=t9_stop-t9_start
-per_ques=tic10/test_count
+per_ques=tic10/pyth_trp_case
 per_ques=round((per_ques/60),2)
 tic10=round((tic10/60),2)
 
@@ -418,7 +424,7 @@ print("time taken per ques: {} min {} sec".format(minute_pq,int(round(sec_pq,0))
 ####### Time #### RATIO TO PERCENTAGE ####
         
 tic12=t11_stop-t11_start
-per_ques=tic12/test_count
+per_ques=tic12/rtp_case
 per_ques=round((per_ques/60),2)
 tic12=round((tic12/60),2)
 
@@ -434,7 +440,7 @@ print("time taken per ques: {} min {} sec".format(minute_pq,int(round(sec_pq,0))
 ####### Time #### PERCENTAGE TO RATIO ####
         
 tic13=t12_stop-t12_start
-per_ques=tic13/test_count
+per_ques=tic13/rtp_case
 per_ques=round((per_ques/60),2)
 tic13=round((tic13/60),2)
 
@@ -546,3 +552,4 @@ ax.plot(yar,t13,label="P2R")
 ax.legend(loc='best')
          
 plt.show()
+
